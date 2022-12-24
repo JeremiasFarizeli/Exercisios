@@ -31,28 +31,29 @@
                     <hr>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="language" value="php" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="language" value="php" id="flexRadioDefault1"
+                            onclick="myFunction('php')">
                         <label class="form-check-label" for="flexRadioDefault1">
                             PHP
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="language" value="Java" id="flexRadioDefault2"
-                            checked>
+                            checked onclick="myFunction('Java')">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Java
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="language" value="Java Script"
-                            id="flexRadioDefault3" checked>
+                            id="flexRadioDefault3" onclick="myFunction('Java Script')">
                         <label class="form-check-label" for="flexRadioDefault3">
                             Java Script
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="language" value="C#" id="flexRadioDefault4"
-                            checked>
+                            onclick="myFunction('C#')">
                         <label class="form-check-label" for="flexRadioDefault4">
                             C#
                         </label>
@@ -60,35 +61,16 @@
 
                     <br>
 
-                    <button class="btn btn-primary mb-5" id="btn">Enviar</button>
-
-                    
-
-
-
+                   
                 </div>
 
                 <script>
-                    const btn = document.getElementById('btn')
-                    
-                    btn.addEventListener('click', () => {
 
-                        let inputResult = document.getElementById('result')
-
-                        let radioOpt = document.getElementsByName('language')
-                        let i;
-                        let txt = ""
-
-                        for (i = 0; i < radioOpt.length; i++) {
-                            if (radioOpt[i].checked) {
-                                txt = radioOpt[i].value
-                                console.log("O valor selecionado no input radio é: " + txt)
-                                inputResult.value = txt;
-                            }
-
-                        }
-                    });
-
+                    function myFunction(value) {
+                        let txt = value
+                        console.log("Opção selecionada: " + txt)
+                        document.getElementById('result').value = txt;
+                    }
 
                 </script>
 
@@ -123,7 +105,7 @@
     <!-- Inicio Rodapé -->
     <div class="container-fluid fixed-bottom bg-dark">
         <div class="col-12 card-footer">
-            <Footer class="text-center pt-2 pb-2" style="color: aliceblue;" >Exercicios de programação</Footer>
+            <Footer class="text-center pt-2 pb-2" style="color: aliceblue;">Exercicios de programação</Footer>
         </div>
     </div>
 
