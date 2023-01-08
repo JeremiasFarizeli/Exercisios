@@ -14,3 +14,4 @@ do {
 } while (opcao != -1)
 
 console.log('Fim da execução')
+
