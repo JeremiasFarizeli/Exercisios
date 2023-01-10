@@ -13,4 +13,4 @@ while (opcao != -1){
     console.log(`Opção escolhida foi ${opcao}.`)
 }
 
-console.log('Fim da execução')
+console.log('Fim da execução') 
