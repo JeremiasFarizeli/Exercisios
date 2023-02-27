@@ -31,6 +31,20 @@ server.post("/custumers", (req, res) => {
     return res.status(201).json(newCustumer)
 })
 
+server.put("/custumers/:id", (req, res) =>{
+    const id = parseInt(req.params.id)
+    const { name, site } = req.body
+    
+    const index = custumers.findIndex(item => item.id === id)
+    const status = index >= 0 ? 200 : 404;
+
+    if (index >= 0) {
+        custumers[index] = { id: parseInt(id), name, site }
+    }
+
+    return res.status(status).json(custumers[index])
+})
+
 
 
 
